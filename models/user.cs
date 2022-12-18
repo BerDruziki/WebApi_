@@ -4,8 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 [Table("Users")]
 public class User
 {
+    [Key]
+    [Required]
     public int id { get; set; }
         
+    [Required]
     public string uuId { get; set; }
     
     [Required]

@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using lumni.data;
+using webapi.data;
 
 #nullable disable
 
 namespace Lumni.Migrations
 {
     [DbContext(typeof(pgsql))]
-    [Migration("20221208234140_initialCriate")]
-    partial class initialCriate
+    [Migration("20221218015117_initialRecreate")]
+    partial class initialRecreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

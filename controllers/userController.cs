@@ -1,5 +1,5 @@
 //using System.ComponentModel.DataAnnotations;
-using lumni.data;
+using webapi.data;
 using Microsoft.AspNetCore.Mvc;
 using FluentValidation.Results; 
 using FluentValidation;
@@ -17,6 +17,8 @@ namespace user.controllers
             ValidationResult result = validator.Validate(user);
             using (var dbpg = new pgsql())
             {
+                Guid useruuId = Guid.NewGuid();
+                string useruuIdAsString = useruuId.ToString();
                 dbpg.users.Add(user);
                 await dbpg.SaveChangesAsync();
             }
